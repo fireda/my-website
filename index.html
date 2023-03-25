@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ia_智能</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css">
+    <script src="js/jquery_min1_11_2.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        a{
+           text-decoration: none;
+           color: #000;
+        }
+        .hhh{
+            display: block;
+        }
+        .hhh a:hover{
+            text-decoration: none;
+            color: #f6f6f6;
+        }
+        
+        .navbar-default {
+            background-color: #0a9257;
+        }
+
+
+        .content_navbar{
+            height: 120px;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #ffffff;
+        }
+        .navbar-default .navbar-header> a {
+            color: #ffffff;
+        }
+
+        .title{
+            text-align: center;
+            height: 500px;
+            color: #ffffff;
+            /* line-height: 500px; */
+
+        }
+        .title h1{
+            padding-top: 150px;
+            font-size: 60px;
+            font-family: Arial, sans-serif;
+        }
+        .title p{
+            /* font-size: 60px; */
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form.navbar-form input[type="text"] {
+            width: 600px;
+        }
+
+        .service_header{
+            text-align: center;
+            display: block;
+            color:#999999;
+        }
+        .row{
+            text-align: center;
+            display: block;
+            padding: 20px;
+            color: #999999;
+            /* background-color: #0a9257; */
+        }
+
+        .logo-large-green {
+            font-size: 40px; /* increase font size */
+            color: #0a9257; /* set color to green */
+        }
+        
+
+        .response_header{
+            height: 14px;
+            background: #f6f6f6;
+            margin-top: 70px;
+        }
+
+        .carousel-control.left, 
+        .carousel-control.right {
+            background-image: none;
+            color: #0a9257;
+        }
+        
+        .carousel{
+            /* width: 700px; */
+            text-align: center;
+            margin: auto;
+            display: block;
+            background: #f6f6f6;
+            color: #999999;
+        }
+        .carousel-inner{
+            height: 100px;
+            line-height: 110px;
+            text-align: center;
+            background: #f6f6f6;
+            color: #999999;
+            /* width:1000px; */
+        }
+        .carousel-inner p{
+            text-align: center;
+            color: #999999;
+        }
+        
+        .carousel-indicators {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            background: #f6f6f6;
+            color: #999999;
+            /* transform: translateX(-50%); */
+            /* margin-bottom: 20px; */
+            /* height: 400px; */
+            /* color: #000; */
+        }
+
+        .carousel-indicators li {
+            background-color: aliceblue; /* 设置轮播点的颜色 */
+        }
+
+        .carousel-indicators li:hover,
+        .carousel-indicators li.active {
+            background-color:  #1fb775; /* 设置选中时和悬停时的颜色 */
+        }
+
+        .container-fluid{
+			padding: 60px 50px;
+		}
+
+        .logo {
+			color: #18936c;
+			font-size: 200px;
+		}
+
+        .bg-grey{
+			background: #f6f6f6;
+            color: #999999;
+            height: 1000px;
+            margin-top: 50px;
+        }
+        .bg-grey1{
+			background: #f6f6f6;
+            color: #999999;
+            /* height: 600px; */
+        }
+        .cow{
+            
+            color: aliceblue;
+            border: 2px solid #0a9257;
+            cursor: pointer;
+            transition: all 0.5s;
+            /* height: 500px; */
+        }
+        .cow:hover{
+            box-shadow: 5px 0 40px rgba(0,0,0,0.2);
+            transform: scale(1.1);
+        }
+        .cow1{
+            background-color: #0a9257;
+            /* height: 500px; */
+            
+        }
+        .cow2{
+            color: #999999;
+            /* height: 270px; */
+            /* line-height: 30px;
+            padding: 10px 0px;
+            display:block; */
+            /* line-height: 300px; */
+        }
+        .price_all{
+            height: 40px;
+            line-height: 40px;
+            color: #999999;
+        }
+
+        .cow3{
+            color: #999999;
+            padding: 3px;
+            display: block;
+        }
+        .cow4{
+            color: #999999;
+            display: block;
+            background-color: white;
+            /* background-color: #; */
+            /* padding: 2px; */
+        }
+        
+        button{
+            background-color: #0a9257;
+            color: aliceblue;
+        }
+
+        button:hover{
+            background-color: #f6f6f6;
+            border: 1px solid #0a9257;
+            color: #0a9257;
+            
+            /* display: block; */
+        }
+        .ljj{
+            background-color: #f6f6f6;
+            color: #999999;
+
+        }
+        /* .ljj h2{
+         
+            position: relative;
+        } */
+        .thumbnail img {
+			width: 70%;
+			height: 70%;
+			margin-bottom: 20px;
+            margin-top: 30px;
+            /* margin-left: 0; */
+            /* margin-right: 0px; */
+		}
+        .end{
+            position: fixed;
+            top: 0;
+            /* margin-bottom: 100px; */
+            background-color: #0a9257;
+            height: 50px;
+            width: 100%;
+            z-index: 100;
+        }
+        .start li:hover{
+            background-color: #f6f6f6;
+        }
+
+    </style>    
+</head>
+<body id="myPage">
+
+    <nav class="navbar navbar-default">
+        <div class="container content_navbar end">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" class="navbar-brand">Company Logo</a>
+            </div>
+            
+            <div class="collapse navbar-collapse start" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#service">服务</a></li>
+                    <li><a href="#portfolio">项目展示</a></li>
+                    <li><a href="#pricing">服务价格</a></li>
+                    <li><a href="#contact">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="title">
+            <div class="name_company">
+                <h1>口 袋 有 限 公 司</h1>
+                <p>欢迎您的光临</p>
+                <form action="" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索" width="1000">
+                        <button type="submit" value="搜索" class="btn btn-success" >搜索</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container-fluid" id="about">
+        <div class="row_fluid">
+            <div class="col-md-8">
+                <h2>关于公司</h2>
+                <h4>业务简介</h4>
+                <p>本公司的业务包括......</p>
+                <button class="btn btn-default btn-lg hhh"><a href="other person speak/index.html">点击看作者</a></button>
+            </div>
+            <div class="col-md-4">
+            <span class="glyphicon glyphicon-signal logo"></span>
+        </div>
+        </div>
+    </div>
+
+    <div id="value" class="container-fluid bg-grey1 text-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>我们的价值观</h2>
+                <h4><strong>任务：</strong>我们的任务主要包括...</h4>
+                <p><strong>社会责任：</strong>今年我们举行了人工智能...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service" id="service">
+        <div class="container">
+            <div class="service_header">
+                <h2>公司服务</h2>
+                <p>服务类型</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-off logo-large-green"></span>
+                    <h4>云服务</h4>
+                    <p>选择对应套餐</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-heart logo-large-green"></span>
+                    <h4>员工关怀</h4>
+                    <p>点击查看内容</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-lock logo-large-green"></span>
+                    <h4>安全方案</h4>
+                    <p>加密与安全设备配置</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-leaf logo-large-green"></span>
+                    <h4>环保服务</h4>
+                    <p>选择对应套餐</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-certificate logo-large-green"></span>
+                    <h4>证件办理</h4>
+                    <p>点击查看内容</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-wrench logo-large-green"></span>
+                    <h4>售后服务</h4>
+                    <p>申请客服介入</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    
+    <div class="container-fluid text-center bg-grey" id="portfolio">
+        <h2>项目展示</h2>
+            <h4>创造的相关成果</h4>
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="photo/QQ图片20230323232223.png" alt="">
+                        <p><strong>智慧IA</strong></p>
+                        <p>智慧算法建设</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="photo/QQ图片20230323232238.png" alt="">
+                        <p><strong>智慧IA</strong></p>
+                        <p>智慧视觉建设</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="photo/QQ图片20230323232241.png" alt="">
+                        <p><strong>智慧IA</strong></p>
+                        <p>智慧生态建设</p>
+                    </div>
+                </div>
+            </div>
+        <div class="response_header">
+            <h3>客户反馈</h3>
+            <div class="carousel slide" id="myCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <p>您的反馈是我们不断改进的动力</p>
+                        <!-- <p>口袋</p> -->
+                        <!-- <div class="carousel-caption">口袋</div> -->
+                    </div>
+                
+    
+                    <div class="item">
+                        <p>我们会认真处理您的反馈，确保您在使用我们的服务时享受最好的体验</p>
+                        <!-- <div class="carousel-caption">口袋</div> -->
+                    </div>
+    
+                    <div class="item">
+                        <p>我们的目标是为您提供最好的服务，感谢您的反馈帮助我们实现</p>
+                        <!-- <div class="carousel-caption">口袋</div> -->
+                    </div>
+                </div>
+                <a href="#myCarousel" class="carousel-control left" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a href="#myCarousel" class="carousel-control right" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>    
+                </a>
+                <br>
+                <br>
+                <ul class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ul>
+            </div>
+        </div>    
+    </div>
+
+    <div id="pricing" class="container-fluid">
+        <div class="text-center cow3">
+            <h2 class="cow3">商品价格</h2>
+            <h4 class="cow3">总有适合你的服务</h4>
+        </div>
+        <div class="price_all">
+            <div class="col-sm-4">
+                <div class="panel panel-defualt text-center cow">
+                    <div class="panel-heading cow1">
+                        <h1>基础型号</h1>
+                    </div>
+                    <div class="panel-body cow2">
+                        <p><strong>任务自动化</strong>  编写程序、规则和算法</p>
+                        <p><strong>规则驱动的人工智能</strong>  如专家系统和语音识别</p>
+                        <p><strong>机器学习</strong>  进行分类、回归和聚类等任务</p>
+                        <p><strong></strong></p>
+                        <p><strong></strong></p>
+                    </div>
+                    <div class="panel-footer cow4">
+                        <h3>￥120</h3>
+                        <h4>/1个月</h4>
+                        <button class="btn btn-lg">查看详情</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-defualt text-center cow">
+                    <div class="panel-heading cow1">
+                        <h1>进阶型号</h1>
+                    </div>
+                    <div class="panel-body cow2">
+                        <p><strong>任务自动化</strong>  编写程序、规则和算法</p>
+                        <p><strong>规则驱动的人工智能</strong>  如专家系统和语音识别</p>
+                        <p><strong>机器学习</strong>  进行分类、回归和聚类等任务</p>
+                        <p><strong>深度学习</strong>  模拟人类大脑的神经网络</p>
+                        <p><strong></strong></p>
+                    </div>
+                    <div class="panel-footer cow4">
+                        <h3>￥200</h3>
+                        <h4>/1个月</h4>
+                        <button class="btn btn-lg">查看详情</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-defualt text-center cow">
+                    <div class="panel-heading cow1">
+                        <h1>顶配型号</h1>
+                    </div>
+                    <div class="panel-body cow2">
+                        <p><strong>任务自动化</strong>  编写程序、规则和算法</p>
+                        <p><strong>规则驱动的人工智能</strong>  如专家系统和语音识别</p>
+                        <p><strong>机器学习</strong>  进行分类、回归和聚类等任务</p>
+                        <p><strong>深度学习</strong>  模拟人类大脑的神经网络</p>
+                        <p><strong>意识与通用智能</strong>  实现人工通用智能和意识</p>
+                    </div>
+                    <div class="panel-footer cow4">
+                        <h3>￥500</h3>
+                        <h4>/1个月</h4>
+                        <button class="btn btn-lg">查看详情</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container-fluid ljj">
+        <h2 class="text-center">联系我们</h2>
+        <div class="ljj">
+            <div class="col-sm-5">
+                <p>输入问题，客服24小时之内回联系您</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 中国，广西</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +86 17150982979</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> 2057922035@qq.com</p>
+            </div>
+            <div class="col-sm-7">
+                <div class="yourinfor">
+                    <div class="col-md-6 form-group">
+                        <input type="text" placeholder="输入您的姓名" required class="form-control">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email" placeholder="输入您的电子邮件" required class="form-control">
+                    </div>
+                    
+                </div>
+                <textarea placeholder="请输入您的问题" rows="5" class="form-control"></textarea>
+                <br>
+                <div class="yourinfor">
+                    <div class="col-md-12 form-group">
+                        <button class="btn btn-default pull-right">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="回到顶部">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>版权声明 <a href="http://www.bootcss.com">bootstrap中文网</a></p>
+    </footer>
+
+    
+
+</body>
+</html>
